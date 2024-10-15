@@ -1,0 +1,278 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Frontend Developer",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React"
+      ],
+      "vacancies": 2,
+      "payRange": "$60,000 - $80,000",
+      "location": "San Francisco, CA",
+      "description": "We are looking for a Frontend Developer with a passion for UI/UX design.",
+      "rolesResponsibilities": [
+        "Develop and maintain user-facing features",
+        "Ensure the technical feasibility of UI/UX designs",
+        "Optimize applications for maximum speed and scalability",
+        "Collaborate with other team members and stakeholders"
+      ],
+      "companyInfo": {
+        "name": "Tech Innovators",
+        "website": "www.techinnovators.com",
+        "description": "A leading technology solutions provider focused on building innovative web applications."
+      }
+    },
+    {
+      "id": "2",
+      "title": "Backend Developer",
+      "skills": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "API Development"
+      ],
+      "vacancies": 3,
+      "payRange": "$70,000 - $100,000",
+      "location": "New York, NY",
+      "description": "Looking for a Backend Developer to manage the interchange of data between the server and users.",
+      "rolesResponsibilities": [
+        "Develop server-side logic and maintain the central database",
+        "Integrate user-facing elements with server-side logic",
+        "Optimize application for maximum speed and scalability",
+        "Implement security and data protection"
+      ],
+      "companyInfo": {
+        "name": "Data Solutions Inc.",
+        "website": "www.datasolutions.com",
+        "description": "A data-driven company that delivers innovative backend solutions."
+      }
+    },
+    {
+      "id": "3",
+      "title": "Full Stack Developer",
+      "skills": [
+        "JavaScript",
+        "Node.js",
+        "React",
+        "MongoDB",
+        "Express"
+      ],
+      "vacancies": 1,
+      "payRange": "$80,000 - $120,000",
+      "location": "Remote",
+      "description": "We are looking for a Full Stack Developer to work on scalable web applications.",
+      "rolesResponsibilities": [
+        "Design overall architecture of the web application",
+        "Maintain quality and ensure responsiveness of applications",
+        "Collaborate with the rest of the engineering team to design and launch new features",
+        "Maintain code integrity and organization"
+      ],
+      "companyInfo": {
+        "name": "WebTech Solutions",
+        "website": "www.webtechsolutions.com",
+        "description": "A remote-first company building cutting-edge web technologies."
+      }
+    },
+    {
+      "id": "4",
+      "title": "DevOps Engineer",
+      "skills": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "CI/CD"
+      ],
+      "vacancies": 1,
+      "payRange": "$90,000 - $130,000",
+      "location": "Austin, TX",
+      "description": "Hiring a DevOps Engineer to streamline our infrastructure and deployment processes.",
+      "rolesResponsibilities": [
+        "Manage cloud infrastructure (AWS)",
+        "Implement CI/CD pipelines for smooth deployment",
+        "Monitor and ensure system health",
+        "Collaborate with development teams for infrastructure requirements"
+      ],
+      "companyInfo": {
+        "name": "CloudOps Co.",
+        "website": "www.cloudopsco.com",
+        "description": "A cloud operations company helping businesses with scalable and secure infrastructures."
+      }
+    },
+    {
+      "id": "5",
+      "title": "UI/UX Designer",
+      "skills": [
+        "Figma",
+        "Adobe XD",
+        "Sketch",
+        "User Research"
+      ],
+      "vacancies": 1,
+      "payRange": "$50,000 - $75,000",
+      "location": "Los Angeles, CA",
+      "description": "We are seeking a UI/UX Designer to create user-centered design solutions for our web applications.",
+      "rolesResponsibilities": [
+        "Conduct user research and evaluate user feedback",
+        "Create wireframes, storyboards, user flows, process flows, and sitemaps",
+        "Collaborate with product management and engineering teams",
+        "Ensure the final product design is consistent with the company’s vision"
+      ],
+      "companyInfo": {
+        "name": "Creative Minds Studio",
+        "website": "www.creativemindsstudio.com",
+        "description": "A design studio focused on delivering innovative and user-centric solutions."
+      }
+    },
+    {
+      "id": "6",
+      "title": "Data Scientist",
+      "skills": [
+        "Python",
+        "R",
+        "Machine Learning",
+        "Data Visualization"
+      ],
+      "vacancies": 2,
+      "payRange": "$100,000 - $140,000",
+      "location": "Boston, MA",
+      "description": "We are hiring a Data Scientist to analyze large datasets and provide actionable insights.",
+      "rolesResponsibilities": [
+        "Apply machine learning algorithms and statistical methods",
+        "Develop predictive models and simulations",
+        "Work with data engineers to ensure data quality and accessibility",
+        "Communicate findings to stakeholders through reports and dashboards"
+      ],
+      "companyInfo": {
+        "name": "Insight Analytics",
+        "website": "www.insightanalytics.com",
+        "description": "A company specializing in data-driven solutions for business intelligence."
+      }
+    },
+    {
+      "id": "7",
+      "title": "Mobile App Developer",
+      "skills": [
+        "Swift",
+        "Kotlin",
+        "React Native",
+        "Mobile UI"
+      ],
+      "vacancies": 3,
+      "payRange": "$85,000 - $110,000",
+      "location": "Chicago, IL",
+      "description": "Looking for a Mobile App Developer to build cutting-edge mobile applications for iOS and Android.",
+      "rolesResponsibilities": [
+        "Develop and maintain mobile applications for iOS and Android platforms",
+        "Ensure the performance and quality of applications",
+        "Collaborate with UI/UX designers for user-friendly interfaces",
+        "Continuously discover, evaluate, and implement new technologies"
+      ],
+      "companyInfo": {
+        "name": "AppTech Innovations",
+        "website": "www.apptechinnovations.com",
+        "description": "A mobile-first company focused on developing user-friendly applications."
+      }
+    },
+    {
+      "id": "8",
+      "title": "Cybersecurity Analyst",
+      "skills": [
+        "Network Security",
+        "Penetration Testing",
+        "Incident Response",
+        "Firewalls"
+      ],
+      "vacancies": 2,
+      "payRange": "$90,000 - $130,000",
+      "location": "Washington, D.C.",
+      "description": "Hiring a Cybersecurity Analyst to ensure the safety of our systems and networks.",
+      "rolesResponsibilities": [
+        "Monitor and analyze potential security breaches",
+        "Perform vulnerability assessments and penetration tests",
+        "Implement security protocols and firewalls",
+        "Work with teams to ensure compliance with security policies"
+      ],
+      "companyInfo": {
+        "name": "SecureNet Inc.",
+        "website": "www.securenet.com",
+        "description": "A cybersecurity company dedicated to protecting critical systems and networks."
+      }
+    },
+    {
+      "id": "9",
+      "title": "Product Manager",
+      "skills": [
+        "Agile",
+        "Scrum",
+        "Product Roadmap",
+        "Team Leadership"
+      ],
+      "vacancies": 1,
+      "payRange": "$110,000 - $150,000",
+      "location": "Seattle, WA",
+      "description": "We are seeking a Product Manager to lead the development of innovative products from concept to launch.",
+      "rolesResponsibilities": [
+        "Define product strategy and roadmaps",
+        "Work closely with engineering, design, and marketing teams",
+        "Manage product lifecycle from planning to execution",
+        "Ensure product vision aligns with customer needs and business goals"
+      ],
+      "companyInfo": {
+        "name": "Innovate Tech Solutions",
+        "website": "www.innovatetech.com",
+        "description": "A tech firm providing innovative solutions for the digital economy."
+      }
+    },
+    {
+      "id": "10",
+      "title": "QA Engineer",
+      "skills": [
+        "Manual Testing",
+        "Automated Testing",
+        "Selenium",
+        "Bug Tracking"
+      ],
+      "vacancies": 3,
+      "payRange": "$70,000 - $90,000",
+      "location": "Remote",
+      "description": "Looking for a QA Engineer to ensure the quality and performance of our software products.",
+      "rolesResponsibilities": [
+        "Design and implement test cases for manual and automated testing",
+        "Identify, track, and report bugs",
+        "Collaborate with developers to resolve issues",
+        "Ensure software meets quality standards before release"
+      ],
+      "companyInfo": {
+        "name": "Code Quality Solutions",
+        "website": "www.codequalitysolutions.com",
+        "description": "A remote-first company focused on delivering high-quality software through rigorous testing."
+      }
+    },
+    {
+      "id": "9593",
+      "title": "sa",
+      "skills": [
+        "react",
+        "node",
+        "database"
+      ],
+      "vacancies": 6,
+      "payRange": "1200-3000",
+      "location": "hydrabad",
+      "description": "add",
+      "rolesResponsibilities": [
+        "asd",
+        "sdd",
+        "dd"
+      ],
+      "companyInfo": {
+        "name": "osi digital",
+        "website": "www.osidigial.com",
+        "description": "sdas wsa"
+      }
+    }
+  ]
+}

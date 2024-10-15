@@ -1,0 +1,100 @@
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #007bff;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: padding 0.3s ease;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, font-size 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #dddddd;
+  }
+  
+  img {
+    width: 150px;
+    transition: width 0.3s ease;
+  }
+  
+  .search-box {
+    border-radius: 50px;
+    border: none;
+    padding: 10px 25px;
+    width: 500px;
+    transition: width 0.3s ease, padding 0.3s ease;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 15px;
+      transition: padding 0.3s ease;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+  
+    .nav-links a {
+      margin-right: 0;
+      margin-bottom: 10px;
+      font-size: 1rem;
+      transition: font-size 0.3s ease;
+    }
+  
+    img {
+      width: 120px;
+      transition: width 0.3s ease;
+    }
+  
+    .search-box {
+      width: auto;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      transition: width 0.3s ease, padding 0.3s ease;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .search-box {
+      padding: 8px 10px;
+      width: 100%;
+      transition: width 0.3s ease, padding 0.3s ease;
+    }
+  
+    .navbar {
+      padding: 10px 15px;
+      transition: padding 0.3s ease;
+    }
+  
+    .nav-links a {
+      font-size: 0.9rem;
+      transition: font-size 0.3s ease;
+    }
+  
+    img {
+      width: 100px;
+      transition: width 0.3s ease;
+    }
+  }
+  

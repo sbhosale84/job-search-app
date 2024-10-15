@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
+import JobList from './components/JobList';
+import JobDetails from './components/JobDetails';
+import NavBar from './components/NavBar';
+import CreateJob from './components/CreateJob';
+import { useState } from 'react';
 
 function App() {
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <NavBar onSearch={handleSearch} />
+      <Routes>
+        <Route path='/jobs' element={<JobList searchTerm={searchTerm} />} />
+        <Route path='/jobDetails/:id' element={<JobDetails />} />
+        <Route path='/createJob' element={<CreateJob />} />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 
