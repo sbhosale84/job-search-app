@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./joblist.css"; // Import the CSS
+import "./joblist.css";
 
 function JobList({ searchTerm }) {
   const navigate = useNavigate();
@@ -16,6 +16,7 @@ function JobList({ searchTerm }) {
       })
       .catch((error) => console.error(error));
   }, []);
+ 
 
   useEffect(() => {
     const filtered = jobs.filter((job) =>

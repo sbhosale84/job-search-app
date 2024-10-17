@@ -1,10 +1,11 @@
 import './App.css';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
-import JobList from './components/JobList';
-import JobDetails from './components/JobDetails';
 import NavBar from './components/NavBar';
-import CreateJob from './components/CreateJob';
-import { useState } from 'react';
+import React, { Suspense, useState } from 'react';
+
+const JobList = React.lazy(() => import("./components/JobList"));
+const JobDetails = React.lazy(() => import("./components/JobDetails"));
+const CreateJob = React.lazy(() => import("./components/CreateJob"));
 
 function App() {
 
@@ -17,11 +18,13 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar onSearch={handleSearch} />
-      <Routes>
-        <Route path='/jobs' element={<JobList searchTerm={searchTerm} />} />
-        <Route path='/jobDetails/:id' element={<JobDetails />} />
-        <Route path='/createJob' element={<CreateJob />} />
-      </Routes>
+      <Suspense fallback={<div className='spinner-container'><div className='spinner'></div></div>}>
+        <Routes>
+          <Route path='/jobs' element={<JobList searchTerm={searchTerm} />} />
+          <Route path='/jobDetails/:id' element={<JobDetails />} />
+          <Route path='/createJob' element={<CreateJob />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
 
   );

@@ -4,8 +4,8 @@ import "./navBar.css";
 import img from "../assests/myLogo2.png";
 
 function NavBar({ onSearch }) {
-  const [search, setSearch] = useState("");
   const location = useLocation();
+  const [search, setSearch] = useState("");
 
   const showSearchBar = location.pathname === "/jobs";
 
