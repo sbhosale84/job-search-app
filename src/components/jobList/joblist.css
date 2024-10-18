@@ -43,7 +43,14 @@ h2 {
 }
 
 .job-info {
-  flex-grow: 1;
+  flex-grow: 1; 
+}
+.info-edit{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
 }
 
 .job-actions {
@@ -51,6 +58,13 @@ h2 {
   align-items: center;
   justify-content: space-between;
   margin-top: 15px;
+}
+.heading{
+    font-size: 1.5rem;
+    position: relative;
+    display: flex;
+    /* float: left; */
+    align-items: flex-start;
 }
 
 button {

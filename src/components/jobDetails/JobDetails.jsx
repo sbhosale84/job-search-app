@@ -27,11 +27,11 @@ function JobDetails() {
         <div>
           <h2>{job.title}</h2>
           <h1>{job.companyInfo.name}</h1>
-          <p className="details-item">Description: {job.description}</p>
-          <p className="details-item">Skills: {job.skills.join(", ")}</p>
-          <p className="details-item">Location: {job.location}</p>
-          <p className="details-item">Vacancies: {job.vacancies}</p>
-          <p className="details-item">Pay Range: {job.payRange}</p>
+          <p className="details-item">Description: {job?.description}</p>
+          <p className="details-item">Skills: {job?.skills.join(", ")}</p>
+          <p className="details-item">Location: {job?.location}</p>
+          <p className="details-item">Vacancies: {job?.vacancies}</p>
+          <p className="details-item">Pay Range: {job?.payRange}</p>
           <h3>Roles and Responsibilities:</h3>
           <ul>
             {job.rolesResponsibilities.map((role, index) => (

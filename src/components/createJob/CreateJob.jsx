@@ -1,21 +1,23 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./createJob.css"
+import { json, useLocation, useNavigate } from "react-router-dom";
+import "./createJob.css";
 function CreateJob() {
-  const [formData, setFormData] = useState({
-    title: "",
-    skills: "",
-    vacancies: "",
-    payRange: "",
-    location: "",
-    description: "",
-    rolesResponsibilities: "",
-    companyName: "",
-    companyWebsite: "",
-    companyDescription: "",
-  });
-
   const navigate = useNavigate();
+  const { state } = useLocation();
+  const { job } = state || {};
+
+  const [formData, setFormData] = useState({
+    title: job?.title || "",
+    skills: job?.skills.join(", ") || "",
+    vacancies: job?.vacancies || "",
+    payRange: job?.payRange || "",
+    location: job?.location || "",
+    description: job?.description || "",
+    rolesResponsibilities: job?.rolesResponsibilities.join(", ") || "",
+    companyName: job?.companyInfo.name || "",
+    companyWebsite: job?.companyInfo.website || "",
+    companyDescription: job?.companyInfo.description || "",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,42 +33,65 @@ function CreateJob() {
     const newJob = {
       title: formData.title,
       skills: formData.skills.split(",").map((skill) => skill.trim()),
-      vacancies: parseInt(formData.vacancies, 10), 
+      vacancies: parseInt(formData.vacancies, 10),
       payRange: formData.payRange,
       location: formData.location,
       description: formData.description,
-      rolesResponsibilities: formData.rolesResponsibilities.split(",").map((role) => role.trim()), 
+      rolesResponsibilities: formData.rolesResponsibilities
+        .split(",")
+        .map((role) => role.trim()),
       companyInfo: {
         name: formData.companyName,
         website: formData.companyWebsite,
         description: formData.companyDescription,
       },
     };
-
-    fetch("http://localhost:4000/jobs", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newJob),
-    })
-      .then((response) => {
-        if (response.ok) {
-          alert("Job successfully created!");
-          navigate("/jobs"); 
-        } else {
-          alert("Failed to create job.");
-        }
+    if (job) {
+      fetch(`http://localhost:4000/jobs/${job.id}`, {
+        method: "put",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newJob),
       })
-      .catch((error) => {
-        console.error("Error creating job:", error);
-        alert("An error occurred while creating the job.");
-      });
+        .then((response) => {
+          if (response.ok) {
+            alert("Job successfully updated!");
+            navigate("/jobs");
+          } else {
+            alert("Failed to update job.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error updating job:", error);
+          alert("An error occurred while updating the job.");
+        });
+    } else {
+      fetch("http://localhost:4000/jobs", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newJob),
+      })
+        .then((response) => {
+          if (response.ok) {
+            alert("Job successfully created!");
+            navigate("/jobs");
+          } else {
+            alert("Failed to create job.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error creating job:", error);
+          alert("An error occurred while creating the job.");
+        });
+    }
   };
 
   return (
     <div className="create-job-container">
-      <h2>Create Job</h2>
+      <h2>{job ? "Edit Job" : "Create Job"}</h2>
       <form onSubmit={handleSubmit} className="create-job-form">
         <div>
           <label>Job Title:</label>
@@ -166,7 +191,7 @@ function CreateJob() {
             required
           />
         </div>
-        <button type="submit">Create Job</button>
+        <button type="submit">{job ? "Update job" : "Create Job"}</button>
       </form>
     </div>
   );

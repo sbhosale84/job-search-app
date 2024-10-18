@@ -1,7 +1,6 @@
 {
   "jobs": [
     {
-      "id": "1",
       "title": "Frontend Developer",
       "skills": [
         "HTML",
@@ -10,7 +9,7 @@
         "React"
       ],
       "vacancies": 2,
-      "payRange": "$60,000 - $80,000",
+      "payRange": "$60,000 - $85,000",
       "location": "San Francisco, CA",
       "description": "We are looking for a Frontend Developer with a passion for UI/UX design.",
       "rolesResponsibilities": [
@@ -23,7 +22,8 @@
         "name": "Tech Innovators",
         "website": "www.techinnovators.com",
         "description": "A leading technology solutions provider focused on building innovative web applications."
-      }
+      },
+      "id": "1"
     },
     {
       "id": "2",
