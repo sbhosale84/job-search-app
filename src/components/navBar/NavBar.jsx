@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./navBar.css";
 import img from "../../assests/myLogo2.png";
@@ -7,8 +7,18 @@ import { AuthContext } from "../../assests/AuthContext";
 function NavBar({ onSearch }) {
   const location = useLocation();
   const [search, setSearch] = useState("");
-  const navigate = useNavigate();
-  const {logout} = useContext(AuthContext);
+  const [userType, setUserType] = useState(false);
+  const { logout } = useContext(AuthContext);
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    if (loggedInUser) {
+      const loginObj = JSON.parse(loggedInUser);
+      if (loginObj.role === "admin") {
+        setUserType(true);
+      }
+    }
+  });
 
   const showSearchBar = location.pathname === "/jobs";
   const showNavBar = location.pathname === "/";
@@ -28,7 +38,7 @@ function NavBar({ onSearch }) {
         <nav className="navbar">
           <div className="nav-links">
             <Link to="/jobs">Home</Link>
-            <Link to="/createJob">Create Job</Link>
+            {userType && <Link to="/createJob">Create Job</Link>}
           </div>
           <div>
             {showSearchBar && (

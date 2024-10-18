@@ -9,7 +9,7 @@
         "React"
       ],
       "vacancies": 2,
-      "payRange": "$60,000 - $85,000",
+      "payRange": "$70,000 - $85,000",
       "location": "San Francisco, CA",
       "description": "We are looking for a Frontend Developer with a passion for UI/UX design.",
       "rolesResponsibilities": [
@@ -252,27 +252,27 @@
       }
     },
     {
-      "id": "9593",
-      "title": "sa",
+      "title": "Web Developer",
       "skills": [
         "react",
         "node",
         "database"
       ],
       "vacancies": 6,
-      "payRange": "1200-3000",
+      "payRange": "$1200-$3000",
       "location": "hydrabad",
-      "description": "add",
+      "description": "full stack web developer with with proper coding logic",
       "rolesResponsibilities": [
-        "asd",
-        "sdd",
-        "dd"
+        "debugging",
+        "unit testing",
+        "ui"
       ],
       "companyInfo": {
-        "name": "osi digital",
+        "name": "Osi Digital",
         "website": "www.osidigial.com",
-        "description": "sdas wsa"
-      }
+        "description": "Its service based company with more that 150 client across the world,found in 1993"
+      },
+      "id": "9593"
     }
   ]
 }

@@ -12,7 +12,6 @@ function JobList({ searchTerm }) {
     const loggedInUser = localStorage.getItem("loggedInUser");
     if (loggedInUser) {
       const loginObj = JSON.parse(loggedInUser);
-      console.log(loginObj.role);
       if (loginObj.role === "admin") {
         setIsEdit(true);
       }
