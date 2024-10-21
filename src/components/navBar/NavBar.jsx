@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./navBar.css";
 import img from "../../assests/myLogo2.png";
 import { AuthContext } from "../../assests/AuthContext";
@@ -18,7 +18,7 @@ function NavBar({ onSearch }) {
         setUserType(true);
       }
     }
-  });
+  },[]);
 
   const showSearchBar = location.pathname === "/jobs";
   const showNavBar = location.pathname === "/";
@@ -39,12 +39,13 @@ function NavBar({ onSearch }) {
           <div className="nav-links">
             <Link to="/jobs">Home</Link>
             {userType && <Link to="/createJob">Create Job</Link>}
+            {!userType && <p style={{'color': '#007bff'}} class>hello</p>}
           </div>
-          <div>
+          <div className="search">
             {showSearchBar && (
               <input
                 type="search"
-                className="search-box"
+                className={!userType ? "user-search-box" : "search-box"}
                 value={search}
                 placeholder="Search your job..."
                 onChange={onSearchChange}

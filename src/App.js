@@ -1,10 +1,11 @@
 import './App.css';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import NavBar from './components/navBar/NavBar';
-import React, { Suspense, useContext, useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import LoginComponent from './components/login/LoginComponent';
 import PrivateRoute from "./components/PrivateRoute"
 import { AuthProvider } from './assests/AuthContext';
+
 const JobList = React.lazy(() => import("./components/jobList/JobList"));
 const JobDetails = React.lazy(() => import("./components/jobDetails/JobDetails"));
 const CreateJob = React.lazy(() => import("./components/createJob/CreateJob"));

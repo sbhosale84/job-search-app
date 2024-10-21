@@ -1,143 +1,150 @@
-
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background-color: #007bff;
-    padding: 10px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: padding 0.3s ease;
-  }
-  
-  .nav-links {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 1.2rem;
-    transition: color 0.3s ease, font-size 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: #dddddd;
-  }
-  
-  .logo-logout img {
-    width: 150px;
-    height: 30px;
-    transition: width 0.3s ease;
-  }
-  
-  .search-box {
-    border-radius: 50px;
-    border: none;
-    padding: 10px 25px;
-    width: 500px;
-    transition: width 0.3s ease, padding 0.3s ease;
-  }
-  
- 
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      padding: 15px;
-      transition: padding 0.3s ease;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 10px;
-    }
-  
-    .nav-links a {
-      margin-right: 0;
-      margin-bottom: 10px;
-      font-size: 1rem;
-      transition: font-size 0.3s ease;
-    }
-  
-    img {
-      width: 120px;
-      transition: width 0.3s ease;
-    }
-  
-    .search-box {
-      width: auto;
-      margin-bottom: 10px;
-      padding: 10px 15px;
-      transition: width 0.3s ease, padding 0.3s ease;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .search-box {
-      padding: 8px 10px;
-      width: 100%;
-      transition: width 0.3s ease, padding 0.3s ease;
-    }
-  
-    .navbar {
-      padding: 10px 15px;
-      transition: padding 0.3s ease;
-    }
-  
-    .nav-links a {
-      font-size: 0.9rem;
-      transition: font-size 0.3s ease;
-    }
-  
-    img {
-      width: 100px;
-      transition: width 0.3s ease;
-    }
-  }
-  
-  .logout {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    width: auto;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #007bff;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: padding 0.3s ease;
 }
 
-.logout:hover {
-    background-color: #45a049;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.nav-links {
+  display: flex;
+  align-items: center;
 }
 
-.logout:focus {
-    outline: none;
-    box-shadow: 0px 0px 0px 4px rgba(76, 175, 80, 0.4);
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, font-size 0.3s ease;
 }
+
+.nav-links a:hover {
+  color: #dddddd;
+}
+
+.logo-logout img {
+  width: 150px;
+  height: 30px;
+  transition: width 0.3s ease;
+}
+
+.search-box {
+  border-radius: 50px;
+  border: none;
+  padding: 10px 25px;
+  width: 500px;
+  transition: width 0.3s ease, padding 0.3s ease;
+}
+
+.user-search-box {
+  border-radius: 50px;
+  border: none;
+  padding: 10px 25px;
+  display: flex;
+  width: 500px;
+  transition: width 0.3s ease, padding 0.3s ease;
+}
+
 
 
 @media (max-width: 768px) {
-    .logout {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+    transition: padding 0.3s ease;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin-right: 0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    transition: font-size 0.3s ease;
+  }
+
+  img {
+    width: 120px;
+    transition: width 0.3s ease;
+  }
+
+  .search-box {
+    width: auto;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    transition: width 0.3s ease, padding 0.3s ease;
+  }
 }
 
 @media (max-width: 600px) {
-    .logout {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-    }
+  .search-box {
+    padding: 8px 10px;
+    width: 100%;
+    transition: width 0.3s ease, padding 0.3s ease;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+    transition: padding 0.3s ease;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    transition: font-size 0.3s ease;
+  }
+
+  img {
+    width: 100px;
+    transition: width 0.3s ease;
+  }
 }
 
+.logout {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: auto;
+}
 
-.logo-logout{
+.logout:hover {
+  background-color: #45a049;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logout:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 4px rgba(76, 175, 80, 0.4);
+}
+
+@media (max-width: 768px) {
+  .logout {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .logout {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+.logo-logout {
   display: flex;
   flex-direction: row;
   align-items: center;
